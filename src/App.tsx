@@ -7,6 +7,8 @@ import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { IntlProvider } from "./components/IntlProvider";
+
+// The App comes together
 export default function App() {
   return (
     <IntlProvider>
