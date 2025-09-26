@@ -6,18 +6,16 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  base: '/My-Portfolio/',
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     alias: {
       "@": path.resolve(__dirname, "./src"),
-      'lucide-react@0.487.0': 'lucide-react',
-      'embla-carousel-react@8.6.0': 'embla-carousel-react',
-      'cmdk@1.1.1': 'cmdk',
     },
   },
   build: {
-    target: 'esnext',
-    outDir: 'build',
+    outDir: 'dist',
+    assetsDir: 'assets',
   },
   server: {
     port: 3000,
