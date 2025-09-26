@@ -6,9 +6,8 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/My-Portfolio/',
+  base: '/',
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
