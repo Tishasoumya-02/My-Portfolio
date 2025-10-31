@@ -3,6 +3,7 @@ export const en = {
   "nav.home": "Home",
   "nav.about": "About",
   "nav.projects": "Projects",
+  "nav.conferences": "Conferences & Sprints",
   "nav.blog": "Blog",
   "nav.contact": "Contact",
   "nav.menu": "Menu",
@@ -37,8 +38,12 @@ export const en = {
     "Selected as one of 1,200 students worldwide to contribute to open-source software development. Worked on improving accessibility features and modernizing the frontend architecture of Plone CMS.",
   "highlight.title": "Special Achievement",
 
+  "conference.title": "Conferences & Sprints",
+  "conference.description":
+    "Events, conferences, and development sprints I've participated in, contributing to the open source community and advancing my skills.",
+
   //Project
   "project.title": "Featured Projects",
   "project.description":
-    "A collection of projects that showcase my passion for creating meaningful digital experiences with modern technologies.",
+    "A collection of open source projects to which I actively contributed to, showcasing my passion for creating meaningful digital experiences with modern technologies.",
 };

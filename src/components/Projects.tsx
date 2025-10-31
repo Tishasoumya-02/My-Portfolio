@@ -8,41 +8,37 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ImageWithFallback } from "./ImageWithFallback";
-import { ExternalLink, Github } from "lucide-react";
 import { useIntl } from "react-intl";
 const Projects = () => {
   const intl = useIntl();
   const projects = [
     {
-      title: "IN PROGRESS - AI Personal Assistant Web Application",
+      title: "Active contribution to Plone MCP",
       description:
-        "Personal Assistant - Organising Mails,Meets and Answering Queries.",
+        "Building MCP tools to automate adding content to Plone sites, heavily relying on Plone REST API",
       image:
-        "https://images.unsplash.com/photo-1554306274-f23873d9a26c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzU3OTY4NjE3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["React", "TypeScript", "Python", "AI/ML", "Langchain"],
-      liveUrl: "#",
-      githubUrl: "#",
+        "https://cdn.prod.website-files.com/64128071fa22275256c1c222/6827754f0c3f7f4bc49d9f80_mcp.png",
+      technologies: ["React", "TypeScript", "MCP", "AI/ML", "FastAPI"],
+      githubUrl: "https://github.com/plone/plone-mcp",
     },
     {
       title: "In Volto , refactoring class component to functional component ",
       description:
         "Refactoring a legacy class component to a modern functional component using React hooks and context API. Also add Cypress tests",
-      image:
-        "https://images.unsplash.com/photo-1678667720699-5c0fc04ac166?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ24lMjBtb2NrdXB8ZW58MXx8fHwxNzU3OTE3ODU4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "https://demo.plone.org/static/media/Logo.16e25cdf.svg",
       technologies: ["React", "Redux", "Javascript", "Cypress"],
       liveUrl: "https://demo.plone.org/",
-      githubUrl: "https://github.com/plone/volto/pulls/Tishasoumya-02",
+      githubUrl:
+        "https://github.com/plone/volto/pulls?q=is%3Apr+author%3ATishasoumya-02+is%3Aclosed",
     },
     {
-      title: "Music Recommendation System",
+      title: "Active contribution to Volto , frontend for Plone CMS",
       description:
-        "A music recommendation system that suggests songs based on user preferences and listening history.",
+        "Developing new features and fixing bugs in Volto, the React-based frontend for Plone CMS, enhancing user experience and accessibility.",
       image:
-        "https://images.unsplash.com/photo-1619983081563-430f63602796?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bXVzaWN8ZW58MHx8MHx8fDA%3D",
-      technologies: ["React", "Node.js", "Python", "MongoDB", "Flask"],
-      liveUrl: "#",
-      githubUrl:
-        "https://github.com/Tishasoumya-02/Music-Recommendation-Web-App",
+        "https://raw.githubusercontent.com/plone/volto/main/logos/volto-colorful.png",
+      technologies: ["React", "Javascript", "TypeScript", "Python"],
+      githubUrl: "https://github.com/plone/volto",
     },
   ];
 
@@ -97,22 +93,38 @@ const Projects = () => {
               </CardContent>
 
               <CardFooter className="p-6 pt-0 flex gap-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex-1 group-hover:border-primary/50"
-                >
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Live Demo
-                </Button>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex-1 group-hover:border-primary/50"
-                >
-                  <Github className="w-4 h-4 mr-2" />
-                  Code
-                </Button>
+                {project.liveUrl && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex-1 group-hover:border-primary/50"
+                    asChild={true}
+                  >
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Live Demo
+                    </a>
+                  </Button>
+                )}
+                {project.githubUrl && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex-1 group-hover:border-primary/50"
+                    asChild={true}
+                  >
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Code
+                    </a>
+                  </Button>
+                )}
               </CardFooter>
             </Card>
           ))}

@@ -6,6 +6,7 @@ import Highlight from "./components/Highlight";
 import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Conferences from "./components/Conferences";
 import { IntlProvider } from "./components/IntlProvider";
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
         <Hero />
         <About />
         <Projects />
+        <Conferences />
         <Highlight />
         <Blog />
         <Contact />

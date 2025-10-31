@@ -22,6 +22,10 @@ const Header = () => {
     { name: intl.formatMessage({ id: "nav.home" }), href: "#home" },
     { name: intl.formatMessage({ id: "nav.about" }), href: "#about" },
     { name: intl.formatMessage({ id: "nav.projects" }), href: "#projects" },
+    {
+      name: intl.formatMessage({ id: "nav.conferences" }),
+      href: "#conferences",
+    },
     { name: intl.formatMessage({ id: "nav.blog" }), href: "#blog" },
     { name: intl.formatMessage({ id: "nav.contact" }), href: "#contact" },
   ];

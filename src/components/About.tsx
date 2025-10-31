@@ -15,6 +15,12 @@ const About = () => {
     "Node.js",
     "Python",
     "AI/ML",
+    "MCP TOOLS",
+    "Plone CMS",
+    "FastAPI",
+    "REST API",
+    "Git & GitHub",
+    "Testing (Cypress, Jest)",
     "Accessibility",
     "Multilingual",
   ];
